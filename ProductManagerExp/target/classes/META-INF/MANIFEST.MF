@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: rajku
+Build-Jdk: 17.0.2
+Implementation-Title: ProductManagerExp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: net.codejava
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/ProductManagerExp
+Created-By: Maven Integration for Eclipse
+

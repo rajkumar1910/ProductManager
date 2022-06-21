@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New IKEA product</title>
+ <link rel="stylesheet"   href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script>
+        $(function() {
+          $( ".datepicker" ).datepicker();
+        });
+    </script>
+</head>
+<body>
+	<div align="center">
+		<h1>Create New IKEA product</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${product}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>product_name:</td>
+					<td><input type="text" field="*{product_name}" name="product_name"></td>
+				</tr>
+				<tr>
+					<td>description:</td>
+					<td><input type="text" field="*{description}" name="description"/></td>
+				</tr>
+				<tr>
+					<td>valid_from:</td>
+					<td><input type="text"  name="valid_from" class="datepicker"/></td>
+				</tr>
+				<tr>
+					<td>valid_to:</td>
+					<td><input type="text"  name="valid_to" class="datepicker" /></td>
+				</tr>
+                 <tr>
+					<td>is_bulk:</td>
+					<td><input type="text" field="*{is_bulk}" name="is_bulk"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

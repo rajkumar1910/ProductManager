@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New IKEA product</title>
+ <link rel="stylesheet"   href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script>
+        $(function() {
+          $( ".datepicker" ).datepicker();
+        });
+    </script>
+</head>
+<body>
+	<div align="center">
+		<h1>Create Product Part</h1>
+		<br />
+		<form action="#" th:action="@{/savePart}" th:object="${product}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>part_number:</td>
+					<td><input type="text" field="*{part_number}" name="part_number"></td>
+				</tr>
+				<tr>
+					<td>part_classification:</td>
+					<td><input type="text" field="*{part_classification}" name="part_classification"/></td>
+				</tr>
+				<tr>
+					<td>part_quantity:</td>
+					<td><input type="text"  name="part_quantity" class="part_quantity"/></td>
+				</tr>
+				<tr>
+					<td>notes:</td>
+					<td><input type="text"  name="notes" class="notes" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
